@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIView *placeHolderView;
 @property (weak, nonatomic) IBOutlet UIView *view1;
 @property (weak, nonatomic) IBOutlet UIView *view2;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *view1Height;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *view2Height;
 
 @end
 @implementation TableViewCell
@@ -25,15 +27,14 @@
     _viewModel = viewModel;
     self.labelStackView.hidden = YES;
     self.imageStackView.hidden = YES;
-    self.view1.hidden = YES;
-    self.view2.hidden = YES;
     if (_viewModel.isImage) {
-        self.view1.hidden = NO;
-        self.imageStackView.hidden = NO;
+        self.view1Height.constant = 295;
+        self.view2Height.constant = 0;
         self.title1Label.text = _viewModel.title;
         self.text1Label.text = _viewModel.text;
     } else {
-        self.view2.hidden = NO;
+        self.view1Height.constant = 0;
+        self.view2Height.constant = 112;
         self.labelStackView.hidden = NO;
         self.titleLabel.text = _viewModel.title;
         self.textLable.text = _viewModel.text;
