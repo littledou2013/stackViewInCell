@@ -61,7 +61,7 @@
 		1B9C4D9921AD0B7600DD7658 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		1B9C4D9C21AD0CF200DD7658 /* CellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellViewModel.h; sourceTree = "<group>"; };
 		1B9C4D9D21AD0CF200DD7658 /* CellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellViewModel.m; sourceTree = "<group>"; };
-		1BCB61FB21AE635300C0D82F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		1BCB61FB21AE635300C0D82F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2600F4120FE8BB9275060C04 /* libPods-testStackView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testStackView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C92F5B06D7DC8E4B67A877 /* Pods-testStackView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testStackView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testStackView/Pods-testStackView.debug.xcconfig"; sourceTree = "<group>"; };
 		E3CCA9AF5EDDF9CD3CC4751B /* Pods-testStackView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testStackView.release.xcconfig"; path = "Pods/Target Support Files/Pods-testStackView/Pods-testStackView.release.xcconfig"; sourceTree = "<group>"; };

@@ -56,6 +56,8 @@ static bool refreshData = true;
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell" forIndexPath:indexPath];
     [self.cellViewModels[indexPath.row] setIndexPath:indexPath];
     [cell setViewModel:self.cellViewModels[indexPath.row]];
+    [cell updateConstraintsIfNeeded];
+    [cell layoutIfNeeded];
     return cell;
 }
 
@@ -78,7 +80,7 @@ static bool refreshData = true;
         CellViewModel *cellViewModel = [CellViewModel new];
         cellViewModel.isImage = YES;
         cellViewModel.text = @"内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容";
-        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
+        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
         cellViewModel.cellHeight = UITableViewAutomaticDimension;
         [self.cellViewModels addObject:cellViewModel];
     }
@@ -86,15 +88,15 @@ static bool refreshData = true;
         CellViewModel *cellViewModel = [CellViewModel new];
         cellViewModel.isImage = YES;
         cellViewModel.text = @"内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容";
-        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
+        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
         cellViewModel.cellHeight = UITableViewAutomaticDimension;
         [self.cellViewModels addObject:cellViewModel];
     }
     {
         CellViewModel *cellViewModel = [CellViewModel new];
-        cellViewModel.isImage = NO;
+        cellViewModel.isImage = YES;
         cellViewModel.text = @"内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容";
-        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
+        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
         cellViewModel.cellHeight = UITableViewAutomaticDimension;
         [self.cellViewModels addObject:cellViewModel];
     }
@@ -106,7 +108,7 @@ static bool refreshData = true;
         CellViewModel *cellViewModel = [CellViewModel new];
         cellViewModel.isImage = YES;
         cellViewModel.text = @"内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容";
-        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
+        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
         cellViewModel.cellHeight = UITableViewAutomaticDimension;
         [self.cellViewModels addObject:cellViewModel];
     }
@@ -114,15 +116,15 @@ static bool refreshData = true;
         CellViewModel *cellViewModel = [CellViewModel new];
         cellViewModel.isImage = YES;
         cellViewModel.text = @"内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容";
-        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
+        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
         cellViewModel.cellHeight = UITableViewAutomaticDimension;
         [self.cellViewModels addObject:cellViewModel];
     }
     {
         CellViewModel *cellViewModel = [CellViewModel new];
-        cellViewModel.isImage = YES;
+        cellViewModel.isImage = NO;
         cellViewModel.text = @"内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容";
-        cellViewModel.title = @"常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题常常的标题";
+        cellViewModel.title = @"常常的标题常常的标";
         cellViewModel.cellHeight = UITableViewAutomaticDimension;
         [self.cellViewModels addObject:cellViewModel];
     }
