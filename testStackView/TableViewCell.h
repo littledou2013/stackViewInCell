@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellViewModel.h"
 
 @interface TableViewCell : UITableViewCell
-
+@property (nonatomic, strong) CellViewModel *viewModel;
 @end

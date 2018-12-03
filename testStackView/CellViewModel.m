@@ -9,5 +9,4 @@
 #import "CellViewModel.h"
 
 @implementation CellViewModel
-
 @end

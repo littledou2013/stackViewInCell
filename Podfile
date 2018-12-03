@@ -4,7 +4,7 @@ platform :ios, "9.0"
 inhibit_all_warnings!
 
 
-target "IGListKitExample" do
+target "testStackView" do
 
 pod 'IGListKit', '~> 3.0'
 
@@ -21,7 +21,7 @@ pod 'AFNetworking', '~> 3.1.0'
 #pod 'Masonry'
 #pod 'Fabric'
 #pod 'Crashlytics', '~> 3.8.3'
-#pod 'MJRefresh', '~> 3.1.0'
+pod 'MJRefresh', '~> 3.1.0'
 #pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 
 #pod 'NEApplicationUpdateManager', '~> 1.0.6'

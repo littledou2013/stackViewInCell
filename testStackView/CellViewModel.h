@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface CellViewModel : NSObject
+@property (nonatomic, assign) BOOL isImage;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *text;
+@property (nonatomic, assign) double cellHeight;
 
+@property (nonatomic, strong) NSIndexPath *indexPath;
 @end
