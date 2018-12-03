@@ -56,8 +56,6 @@ static bool refreshData = true;
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell" forIndexPath:indexPath];
     [self.cellViewModels[indexPath.row] setIndexPath:indexPath];
     [cell setViewModel:self.cellViewModels[indexPath.row]];
-    [cell updateConstraintsIfNeeded];
-    [cell layoutIfNeeded];
     return cell;
 }
 

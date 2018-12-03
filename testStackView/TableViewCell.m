@@ -32,7 +32,7 @@
         self.titleLabel.text = _viewModel.title;
         self.textLable.text = _viewModel.text;
     }
-//    [self.contentView layoutIfNeeded];
+    [self.contentView layoutIfNeeded];
 //    NSLog(@"cell height %lf indexPath : %@", viewModel.cellHeight, viewModel.indexPath);
 //    CGFloat minHeight = [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 //    CGFloat maxHeight = [self.contentView systemLayoutSizeFittingSize:UILayoutFittingExpandedSize].height;
