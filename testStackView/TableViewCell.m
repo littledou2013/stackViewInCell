@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *title1Label;
 @property (weak, nonatomic) IBOutlet UILabel *text1Label;
 @property (weak, nonatomic) IBOutlet UIView *placeHolderView;
+@property (weak, nonatomic) IBOutlet UIView *view1;
+@property (weak, nonatomic) IBOutlet UIView *view2;
 
 @end
 @implementation TableViewCell
@@ -23,11 +25,15 @@
     _viewModel = viewModel;
     self.labelStackView.hidden = YES;
     self.imageStackView.hidden = YES;
+    self.view1.hidden = YES;
+    self.view2.hidden = YES;
     if (_viewModel.isImage) {
+        self.view1.hidden = NO;
         self.imageStackView.hidden = NO;
         self.title1Label.text = _viewModel.title;
         self.text1Label.text = _viewModel.text;
     } else {
+        self.view2.hidden = NO;
         self.labelStackView.hidden = NO;
         self.titleLabel.text = _viewModel.title;
         self.textLable.text = _viewModel.text;

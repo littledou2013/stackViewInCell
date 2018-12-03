@@ -22,30 +22,20 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zXe-ze-IAS">
                         <rect key="frame" x="16" y="24" width="215" height="310"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JNi-q8-Guv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmz-HD-QDy">
                                 <rect key="frame" x="0.0" y="0.0" width="215" height="280"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmz-HD-QDy">
-                                        <rect key="frame" x="0.0" y="0.0" width="215" height="280"/>
-                                        <color key="backgroundColor" red="0.72156862749999995" green="0.58039215690000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="280" id="bUy-Ss-fzK"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="z7B-ih-h7b">
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.58039215690000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="bUy-Ss-fzK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgW-lV-dTR">
                                 <rect key="frame" x="0.0" y="280" width="215" height="30"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgW-lV-dTR">
-                                        <rect key="frame" x="0.0" y="0.0" width="215" height="30"/>
-                                        <color key="backgroundColor" red="0.80784313730000001" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Ntg-Ic-6Gg"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ntg-Ic-6Gg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -58,8 +48,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="imageStackView" destination="JNi-q8-Guv" id="HKu-fm-3Wc"/>
-                <outlet property="labelStackView" destination="z7B-ih-h7b" id="jhv-kp-cuQ"/>
+                <outlet property="view1" destination="Bmz-HD-QDy" id="pr1-vX-FZf"/>
+                <outlet property="view2" destination="PgW-lV-dTR" id="UXN-LA-hve"/>
             </connections>
             <point key="canvasLocation" x="70.5" y="-251.5"/>
         </tableViewCell>
